@@ -1,10 +1,10 @@
 {
-  "name": "primevue-vite-template",
-  "description": "Setup template for Prime Vue with Vite",
+  "name": "comidapp-crud",
+  "description": "Comidapp CRUD",
   "version": "1.0.0",
   "author": {
-    "name": "Marcelo Velasquez",
-    "email": "marceloo.velasquez@hotmail.com"
+    "name": "Miguel Rey",
+    "email": "miguelreymenendez@gmail.com"
   },
   "scripts": {
     "dev": "vite",

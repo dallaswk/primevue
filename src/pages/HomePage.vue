@@ -1,8 +1,8 @@
 <template>
   <div class="p-text-center p-p-4">
-    <h1>primevue-vite-template</h1>
-    <p>Setup template for Prime Vue with Vite</p>
-    <Button label="GitHub" class="p-m-2" icon="pi pi-star" @click="onClick" />
+    <h1>Comidapp CRUD</h1>
+    <p>CRUD de la APP</p>
+    <Button label="Acceder" class="p-m-2" icon="pi pi-lock" @click="onClick" />
   </div>
 </template>
 
