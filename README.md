@@ -1,28 +1,24 @@
-# Primevue Vite Template
+# vue-firebase-auth-tutorial
 
-Setup template for Prime Vue with Vite
+This is the sample code that accompanies my article on how to add Authenication to your Vue Application using Firebase.
+You can [view the article here](https://wp.me/p3sG15-rG) which gives you step-by-step instructions on how to implement Firebase authentication.
 
----
-
-## Table of Contents
-
-- [Build Setup](#build-setup)
-
-### Build Setup
-
-```bash
-# install dependencies
+## Project setup
+```
 npm install
+```
 
-# serve with hot reload at localhost:3000
-npm run dev
-
-# build for production
-npm run build
-
-# serve build output
+### Compiles and hot-reloads for development
+```
 npm run serve
+```
 
-# run linter for javaScript files
-npm run lint:script
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
 ```

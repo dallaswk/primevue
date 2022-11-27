@@ -1,27 +1,55 @@
 <template>
-  <component :is="layout" class="p-component">
-    <router-view />
-  </component>
+    <div id="app">
+        <div id="nav">
+            <router-link to="/">Inicio</router-link> |
+            <router-link to="/register">Registro</router-link> |
+            <router-link to="/dashboard">Dashboard</router-link> |
+            <button @click="logout">Salir</button>
+        </div>
+        <router-view />
+    </div>
 </template>
 
 <script>
-  import { computed, defineComponent } from 'vue'
-  import { useRoute } from 'vue-router'
+import firebase from 'firebase';
 
-  import DefaultLayout from '@/layouts/DefaultLayout.vue'
-
-  export default defineComponent({
-    components: {
-      DefaultLayout,
+export default {
+    methods: {
+        logout() {
+            firebase
+                .auth()
+                .signOut()
+                .then(() => {
+                    alert('Has cerrado sesion correctamente.');
+                    this.$router.push('/');
+                })
+                .catch(error => {
+                    alert(error.message);
+                    this.$router.push('/');
+                });
+        },
     },
-
-    setup() {
-      const layout = computed(() => {
-        const name = useRoute().meta?.layout || 'default'
-        return `${name}-layout`
-      })
-
-      return { layout }
-    },
-  })
+};
 </script>
+<style>
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+#nav {
+    padding: 30px;
+}
+#nav a {
+    font-weight: bold;
+    color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+    color: #42b983;
+}
+input {
+    margin-right: 20px;
+}
+</style>
