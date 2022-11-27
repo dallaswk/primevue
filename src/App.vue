@@ -20,7 +20,7 @@ export default {
                 .auth()
                 .signOut()
                 .then(() => {
-                    alert('Has cerrado sesion correctamente.');
+                    console.log('Has cerrado sesion correctamente.');
                     this.$router.push('/');
                 })
                 .catch(error => {

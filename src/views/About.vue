@@ -29,11 +29,11 @@ export default {
                 .auth()
                 .createUserWithEmailAndPassword(this.email, this.password)
                 .then(() => {
-                    alert('Registrado correctamente! Accede porfavor...');
+                    console.log('Registrado correctamente! Accede porfavor...');
                     this.$router.push('/');
                 })
                 .catch(error => {
-                    alert(error.message);
+                    console.log(error.message);
                 });
         },
     },
